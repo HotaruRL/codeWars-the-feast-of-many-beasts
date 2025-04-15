@@ -1,15 +1,11 @@
 public class Kata {
-    public static boolean feast(String beast, String dish) {
-        boolean allowed = false;
+    public static boolean feast(Beast beast, Dish dish) {
 
-        String beastFirst = beast.getName().charAt(0);
-        String beastLast = beast.getName().charAt(beast.getName.length() - 1);
-        String dishFirst = dish.getName().charAt(0);
-        String dishLast = dish.getName().charAt(dish.getName.length() - 1);
+        char beastFirst = beast.getName().charAt(0);
+        char beastLast = beast.getName().charAt(beast.getName().length() - 1);
+        char dishFirst = dish.getName().charAt(0);
+        char dishLast = dish.getName().charAt(dish.getName().length() - 1);
 
-        if (beastFirst.equals(dishFirst) + (beastLast.equals(dishLast))){
-            allowed = true;
-        }
-        return allowed;
+        return beastFirst == dishFirst && beastLast == dishLast;
     }
 }
